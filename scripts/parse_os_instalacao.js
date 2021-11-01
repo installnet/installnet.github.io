@@ -93,8 +93,9 @@ function parse(){
 	
 	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_RECIBO]]", cl_recibo);
 	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_MES]]", cl_mes.toLowerCase());
-	
-	window.print()
 }
 
-window.onload = setTimeout(function() { parse(); }, 1000);
+window.onload = setTimeout(function() { 
+	parse();
+	window.print();
+}, 1000);
