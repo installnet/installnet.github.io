@@ -116,8 +116,5 @@ function parse(){
 	document.querySelector("#pdf_imprimir").style.display = "block";
 	document.querySelector("#pdf_recibo").style.display = "block";
 }
-
-document.querySelector("#print_button").onclick = function(){
-	parse();
-	//window.print();
-};
+window.load = function(){parse();};
+//document.querySelector("#print_button").onclick = function(){window.print();};
