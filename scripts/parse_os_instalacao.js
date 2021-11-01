@@ -1,4 +1,4 @@
-function parse(){
+/*function parse(){
 	String.prototype.extenso = function(c){
 	    var ex = [
 		["zero", "um", "dois", "três", "quatro", "cinco", "seis", "sete", "oito", "nove", "dez", "onze", "doze", "treze", "quatorze", "quinze", "dezesseis", "dezessete", "dezoito", "dezenove"],
@@ -115,7 +115,7 @@ function parse(){
 	document.querySelector("#pdf_contrato").style.display = "block";
 	document.querySelector("#pdf_imprimir").style.display = "block";
 	document.querySelector("#pdf_recibo").style.display = "block";
-}
+}*/
 
 document.querySelector("#print_button").onclick = function(){ 
 	window.print(); 
