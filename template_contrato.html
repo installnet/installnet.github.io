@@ -1,0 +1,2132 @@
+<!DOCTYPE HTML>
+<html lang="pt-BR">
+<head>
+	<meta http-equiv="pragma" content="no-cache" />
+	<meta http-equiv="expires" content="-1" />
+	<meta charset="utf-8"/>
+	<meta name="viewport"			content="width=device-width, initial-scale = 1.0, user-scalable = no">
+
+	<!-- styles -->
+	<link rel="stylesheet"			type="text/css"		href="https://installnet.github.io/assets/bootstrap-3.3.5/css/bootstrap.css"/>
+	<link rel="stylesheet"			type="text/css"		href="https://installnet.github.io/assets/DataTables-1.10.9/media/css/dataTables.bootstrap.css"/>
+	<link rel="stylesheet"			type="text/css"		href="https://installnet.github.io/assets/css/style.css"/>
+	<!-- styles -->
+
+	<!-- scripts -->
+	<script src="https://installnet.github.io/assets/jQuery-2.1.3/jquery-2.1.3.js"></script>
+	<script src="https://installnet.github.io/assets/bootstrap-3.3.5/js/bootstrap.js"></script>
+	<script src="https://installnet.github.io/assets/DataTables-1.10.9/media/js/jquery.dataTables.js"></script>
+	<script src="https://installnet.github.io/assets/DataTables-1.10.9/media/js/dataTables.bootstrap.js"></script>
+	<!-- scripts -->
+
+	<title>Ordem de Serviço</title>
+	
+    <style>
+        .header{font-family: Calibri; font-size: 2em;}
+        .header-td{
+        	padding-left: 10%; 
+        	padding-right: 10%; 
+        	padding-top: 2%;
+        }
+        .w-10{width: 10%;}
+        .w-20{width: 20%;}
+        .w-30{width: 30%;}
+        .w-35{width: 35%;}
+        .w-40{width: 40%;}
+        .w-45{width: 45%;}
+        .w-70{width: 70%;}
+        .w-90{width: 90%;}
+        .w-100{width: 100%;}
+        .em13{font-size: 1.1em;}
+        .em15{font-size: 1.3em;}
+        .em17{font-size: 1.5em;}
+        .em2{font-size: 2em;}
+        .ml5{margin-left: 5%;}
+        .ml7{margin-left: 7%;}
+        .arial{font-family: Arial !important;}
+        .times{font-family: "Times New Roman" !important;}
+    </style>
+</head>
+<body>
+	<span id="cl_nome" hidden="">{CL_NOME}</span>
+	<span id="cl_id" hidden="">{CL_ID}</span>
+	<span id="mes" hidden="">{MES}</span>
+	<span id="cl_group_name" hidden="">{CL_GROUP_NAME}</span>
+	<span id="cl_dia_vencimento" hidden="">{CL_DIA_VENCIMENTO}</span>
+	<span id="os_price" hidden="">{OS_PRICE}</span>
+	<div class="print">
+		<div id="contrato" style="display: block;">
+			<div class="div-pagina container" id="pagina1">
+				<div class="row">
+					<table class="w-100">
+						<tr valign="middle">
+							<td align="center" class="em15">
+								{CL_ID} - {CL_NOME}
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="row">
+					<table class="w-100">
+						<tr valign="middle">
+							<td align="left" class="w-30">
+								<img width="100%" src="https://installnet.github.io/assets/images/installnet.png">
+							</td>
+							<td align="center" class="header-td">
+								<span class="header"><strong>CONTRATO DE ACESSO A INTERNET BANDA LARGA QUE CELEBRAM  ENTRE SI:</strong></span>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="row">
+					<table class="w-100">
+						<tr valign="middle">
+							<td align="left">
+								<span class="em17"><strong>Whatsapp: 98841-8181</strong></span>
+							</td>
+							<td align="right">
+								<span class="em17"><strong>Nº. [[CL_CONTRATO]]</strong></span>
+							</td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="row">
+					<table class="w-100">
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr>
+							<td class="w-100">
+								<span align="justify" class="em15">
+									CONTRATANTE: <strong>{CL_NOME}</strong>, com sede na cidade de MACEIÓ, Estado de Alagoas, à Rua/Av.: <strong>{CL_ENDERECO_LOGRADOURO}</strong>, Bairro: <strong>{CL_BAIRRO}</strong>, CEP <strong>{CL_CEP}</strong> inscrita no CPF/CNPJ:<strong>{CL_CPF_CNPJ}</strong> sob, neste ato representado por ____________________________. CONTRATADA: <strong>INSTALLNET SERVIÇOS LTDA</strong>, com sede na cidade de Maceió-AL, inscrita no CNPJ sob o n°12.381.784/0001-24, doravante denominada simplesmente CONTRATADA, neste ato representada pela Sra. MARIA ORGENY DE PINHO BORGES, Brasileira, Solteira, Comerciante, portadora da cédula de identidade n° 698.175 SSP/AL, CPF n° 504.799.384-15, residente à CONJ. JOÃO SAMPAIO II, QD. 1F LT. 84 Nº 84 – <strong>BENEDITO BENTES</strong>, CEP 57084-420, na conformidade de seu Estatuto Social.
+								</span>
+							</td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="row">
+					<table class="w-100">
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml5">
+									1. <strong>CLÁUSULA PRIMEIRA – DO OBJETO</strong>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml7">
+									<strong>1.1 O presente Contrato tem por objeto o fornecimento, pela CONTRATADA</strong>, do conjunto de recursos que permitam conexão do(a) <strong>CONTRATANTE</strong> à rede Internet, através do Serviço de Internet de Banda Larga na velocidade de até {CL_GROUP_NAME} dependendo do contrato.
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml7">
+									1.2 O Serviço de Internet de Banda em sua modalidade, objeto deste contrato dar-se-á de acordo com as características do serviço, discriminada neste Instrumento e nos Anexos.
+								</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="row">
+					<table class="w-100">
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml5">
+									2. <strong>CLÁUSULA SEGUNDA – OBRIGAÇÕES DA CONTRATADA</strong>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml7">
+									<strong>2.1 Disponibilizar em comodato “KIT” constituído de equipamentos descritos na anexa “ORDEM DE SERVIÇO”</strong> a qual passará a fazer parte do presente, indispensáveis para o acesso da internet pelo(a) <strong>CONTRATANTE</strong>, de acordo com critérios e políticas que racionalizem e otimizem a sua utilização, ficando responsável pelos mesmos na forma dos artigos 579 a 585 do Código Civil Brasileiro, devendo restituí-los a <strong>CONTRATADA</strong> no final do contrato caso não haja renovação ou a qualquer tempo por motivo de rescisão.
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml7">
+									2.2 Colocar à disposição e ativar o acesso de Internet de Banda Larga a/ao <strong>CONTRATANTE</strong> conectando-o ao Backbone da <strong>CONTRATADA</strong> na velocidade pactuada.
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml7">
+									2.3 Manter em pleno e adequado funcionamento o serviço, de forma a assegurar a sua prestação 24 (vinte quatro) horas por dia, 7 (sete) dias por semana, exceto nos período de manutenção preventiva ou corretiva. Salvo problemas de fornecimento de energia ou problemas por parte de equipamento do(a) <strong>CONTRATANTE</strong>, (microcomputador).
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml7">
+									2.4 Gerenciar, de maneira pró-ativa, o circuito contratado pelo <strong>CONTRATANTE</strong>. A gerência próativa estará em operação 24 (vinte quatro) horas por dia, 7 (sete) dias por semana. Para efeito deste Contrato, entende-se como gerência pró-ativa a monitoração permanente do circuito, a detecção do problema e o motivo da eventual interrupção <strong>CONTRATADA</strong>. Proceder os reparos e restabelecer o funcionamento.
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml7">
+									2.5 Manter e proteger sua rede, evitando a invasão/interferência de terceiros, preservando seus dados, informações, recursos de hardware e de software.
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml7">
+									2.6 Fornecer a <strong>CONTRATANTE</strong> às especificações relativas à infra-estrutura necessária a ser por ela disponibilizadas em suas dependências, necessárias a implantação dos serviços objeto deste Contrato.
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml7">
+									2.7 Efetuar manutenção preventiva e corretiva nos sistemas de comunicações de sua propriedade, necessárias ao funcionamento dos serviços prestados a/ao <strong>CONTRATANTE</strong>.
+								</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="row">
+					<table class="w-100">
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml5">
+									3. <strong>CLÁUSULA TERCEIRA – OBRIGAÇÕES DO (A) CONTRATANTE</strong>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml7">
+									<strong>3.1 Não transferir para terceiros os direitos e obrigações decorrentes do presente Contrato sem anuência prévia e escrita da CONTRATADA</strong>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml7">
+									3.2 Disponibilizar à <strong>CONTRATADA</strong> gratuitamente o espaço necessário para a instalação dos equipamentos e instrumentos necessários à prestação dos serviços objeto deste Contrato.
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml7">
+									3.3 Garantir a estabilidade da rede elétrica de suas instalações implantando proteção para assegurar a integridade física dos equipamentos de ambas às partes.
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml7">
+									3.4 Permitir acesso de empregados da <strong>CONTRATADA</strong>, ou de empresas por ela credenciada, às suas dependências, devidamente identificadas para efetuar manutenção e verificação dos equipamentos.
+								</div>
+							</td>
+						</tr>						
+					<!-- </table>
+				</div> -->
+			<!-- </div>
+			
+			<div class="quebra">&nbsp;</div>
+
+			<div class="div-pagina container" id="pagina2">		 -->		
+				<!-- <div class="row">
+					<table class="w-100"> -->
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml7">
+									3.5 Guardar e zelar pêlos equipamentos da <strong>CONTRATADA</strong> mantendo-os em ambientes e condições técnicas adequadas, na forma especificadas pelo fabricante e pela <strong>CONTRATADA</strong>, incluindo toda a infraestrutura necessária para o funcionamento dos mesmos
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml7">
+									3.6 Responsabilizar-se pelos danos ou prejuízos causados aos equipamentos, estando obrigado(a) ao ressarcimento à <strong>CONTRATADA</strong> pelo valor atualizado, em casos de perda, extravio, dano ou destruição dos mesmos, ainda que parcial.
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml7">
+									3.7 Solicitar com antecedência mínima de 30 (trinta) dias e por escrito, qualquer solicitação de ativação ou desativação de serviços de conexão, de acordo com a modalidade <strong>CONTRATADA</strong>.
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml7">
+									3.8 Caso o(a) <strong>CONTRATANTE</strong> não forneça as informações solicitadas necessárias à ativação do serviço, a <strong>CONTRATADA</strong> não poderá ser responsabilizada pelo atraso na ativação do serviço.
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml7">
+									3.9 Os equipamentos, (hardware e software) do(a) <strong>CONTRATANTE</strong> devem seguir as especificações da <strong>CONTRATADA</strong>, de maneira a garantir a não interoperabilidade dos equipamentos do(a) <strong>CONTRATANTE</strong> com o backbone da <strong>CONTRATADA</strong>.
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml7">
+									3.10 Utilizar os serviços deste Contrato para os fins de seu objeto, fazendo uso dos meios locados a sua disposição pela <strong>CONTRATADA</strong> exclusivamente para a configuração autorizada, não lhe sendo permitido sublocar, ou ceder a terceiros, a qualquer titulo, os próprios meios ou serviços objeto deste.
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml7">
+									3.11 O(A) <strong>CONTRATANTE</strong>, tem conhecimento pleno de que os serviços poderão, eventualmente, ser afetados, ou temporariamente interrompidos por motivos técnicos, em razão de reparo, manutenção ou troca de equipamento ou danos causados por terceiros e ação da natureza. Em caso de reparo ou troca de equipamento, o prazo máximo para reativação do link será de 72 (setenta e duas) horas.
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml7">
+									3.12 Manter atualizado seu cadastro junto a <strong>CONTRATADA</strong>, informando eventuais alterações de endereços, razão social, e etc.
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml7">
+									3.13 Compete a/ao <strong>CONTRATANTE</strong> solicitar da <strong>CONTRATADA</strong> reparo aos defeitos eventualmente encontrados na prestação do serviço.
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml7">
+									3.14 Cooperação do <strong>CONTRATANTE</strong>, a prestação do suporte não é possível sem a cooperação do mesmo.
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml7">
+									3.14.1 São pré-requisitos do <strong>CONTRATANTE</strong> que solita o suporte:
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml7">
+									a) Ser maior de 18 anos ou emancipado;
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml7">
+									b) Ser representante legal ou autorizado pela empresa/pessoa para qual solicita o suporte;
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml7">
+									c) Possua conhecimentos técnicos oficiais sobre a sua própria estrutura (computadores, redes, equipamentos eletrônicos).
+								</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="row">
+					<table class="w-100">
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml5">
+									4. <strong>CLÁUSULA QUARTA – PREÇO, FORMA DE PAGAMENTO E REAJUSTES</strong>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml7">
+									<strong>4.1 Pela prestação de serviços descritos, a CONTRATANTE</strong> pagará à <strong>CONTRATADA</strong>, no vencimento contratado, remuneração detalhada no Anexo I deste Contrato.
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml7">
+									4.2 Os tributos incidentes sobre os serviços contratados estão inclusos no preço e são de responsabilidade da <strong>CONTRATADA</strong>. No caso de alteração da legislação em vigor, inclusive quanto à criação de novos tributos incidentes, ou alteração de regras de incidência (seja a alteração de base de cálculo ou de alíquotas), que importem em alteração dos encargos tributários ora considerados, os preços acima serão automaticamente ajustados.
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml7">
+									4.3 Os valores relativos à prestação do Serviço, discriminados no ANEXO I deste Termo, serão reajustados anualmente, com base na variação acumulada do IGP-DI, ou qualquer outro índice que venha a substituí-lo, verificada nos doze meses imediatamente anteriores ao mês do reajuste.
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml7">
+									4.4 Caso a legislação venha permitir reajustes a períodos diferentes da anuidade, serão aplicados aos valores estabelecidos no ANEXO I deste Termo, e de menor periodicidade mediante aviso por escrito pela <strong>CONTRATADA</strong> a/ao <strong>CONTRATANTE</strong>.
+								</div>
+							</td>
+						</tr>						
+					</table>
+				</div>
+
+				<div class="row">
+					<table class="w-100">
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml5">
+									5. <strong>CLÁUSULA QUINTA – DA COBRANÇA</strong>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml7">
+									<strong>5.1 O Serviço Internet Banda Larga será cobrado através de boleto bancário, emitido pela CONTRATADA</strong>, podendo esta forma de cobrança ser alterada a qualquer momento com prévio aviso a/ao <strong>CONTRATANTE</strong>.
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml7">
+									5.2 O não pagamento dos valores cobrados até a data de vencimento sujeitará a/ao CONTRATANTE independente de notificação ou interpelação judicial ou extrajudicial, às seguintes sanções, sem prejuízo das exigibilidades pecuniárias cabíveis:
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml7">
+									5.2.1 O pagamento deverá ser efetuado em parcela única. O débito total é composto dos seguintes itens:
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml7">
+									a) Débito original cobrado;
+								</div>
+							</td>
+						</tr>	
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml7">
+									b) 2% (dois por cento) de multa sobre o valor;
+								</div>
+							</td>
+						</tr>	
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml7">
+									c) Juros moratórios de 0,5% ( por cento) ao DIA sobre o valor apurado nos itens “a” e “b” acima, calculados pró-rata die;
+								</div>
+							</td>
+						</tr>	
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml7">
+									d) Quando o atraso for superior a 12 (doze) meses, serão atualizados valores em atraso, pelo IGP - DI, ou critérios de periodicidade e escolha de índice que venham a ser definidos pelo Governo Federal, até a data da efetiva liquidação do débito.
+								</div>
+							</td>
+						</tr>					
+					</table>
+				</div>
+
+				<div class="row">
+					<table class="w-100">
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml5">
+									6. <strong>CLÁUSULA SEXTA – PRAZOS DE VIGÊNCIA</strong>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml7">
+									<strong>6.1 O prazo de vigência deste Contrato é 12 (doze) meses, contados a partir da data de sua assinatura. Caso não haja solicitação explícita de cancelamento por nenhuma das partes, o presente Contrato será automaticamente renovado, por períodos de 12 (doze) meses, sucessivamente, sempre aos preços vigentes à época da renovação.</strong>.
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml7">
+									<strong>6.2 Qualquer dos seguintes benefícios dados ao CONTRATANTE geram 12 meses de fidelidade adicional:</strong>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml7">
+									a) Instalação grátis;
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml7">
+									b) Equipamento em comodato;
+								</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="row">
+					<table class="w-100">
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml5">
+									7. <strong>CLÁUSULA SÉTIMA – RESCISÃO E MULTA CONTRATUAL</strong>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml7">
+									<strong>7.1 Caso a rescisão do contrato de prestação de serviços se dê por iniciativa do assinante/CONTRATANTE</strong> em menos de 12 meses, considerar-se-á rescindido o presente, ficando o mesmo obrigado a:
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml7">
+									7.2 Pagar multa de 20% do valor das parcelas vincendas.
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml7">
+									7.3 Em hipótese alguma a rescisão deste Contrato desobrigará o(a) CONTRATANTE do pagamento de valores devidos até a data da rescisão, decorrentes dos serviços prestados pela CONTRATADA, acrescidos dos encargos legais ate a data da satisfação do crédito.
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml7">
+									7.3.1 A CONTRATADA poderá, entretanto, mediante aviso prévio, por escrito com antecedência mínima de 30 (trinta) dias, rescindir o presente Contrato, independentemente do pagamento de multa ou de qualquer outra sanção.
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml7">
+									7.4 É facultada também às partes a rescisão unilateral, de pleno direito, deste Contrato, a qualquer momento, independentemente de interpelação judicial ou extrajudicial, nos seguintes casos:
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml7">
+									a) Não cumprimento comprovado, pela outra parte, de cláusula contratual ou obrigação dela decorrente;
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml7">
+									b) Falência, concordata, dissolução judicial ou extrajudicial, homologada ou decretada, de qualquer das partes.
+								</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="row">
+					<table class="w-100">
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml5">
+									8. <strong>CLAUSULA OITAVA – DISPOSIÇÕES GERAIS</strong>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml7">
+									<strong>8.1 É de exclusiva responsabilidade do CONTRATANTE</strong> a utilização indevida, por qualquer dos seus usuários finais ou terceiros, do Serviço de Internet Banda Larga. Havendo invasão de privacidade, ou prejuízos a outros usuários da Rede de Internet, como por exemplo, propagação de notícias alarmantes, notícias que contrariem a ordem pública e/ou moral, o presente Contrato poderá ser imediatamente rescindido pela <strong>CONTRATADA</strong> independentemente de notificação judicial, sem prejuízo das Responsabilidades civis e criminais devidas pelo <strong>CONTRATANTE</strong>.
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml7">
+									8.2. Cabe exclusivamente ao <strong>CONTRATANTE</strong> a responsabilidade sobre o conteúdo das informações veiculadas no acesso contratado e pelas condições de prestação de serviços a terceiros.
+								</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="row">
+					<table class="w-100">
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml5">
+									9. <strong>CLAUSULA NONA – DA INTERRUPÇÃO, SUSPENSÃO E RESTABELECIMENTO DOS SERVIÇOS</strong>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml7">
+									<strong>9.1 Os serviços, poderão, eventualmente, serem afetados e interrompidos temporariamente por motivos técnicos, em razão de reparos, manutenção, troca de equipamento ou danos causados por terceiros ou da natureza. O prazo para o reparo não deverá exceder a 72 (setenta e duas) horas. </strong>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml7">
+									<strong>9.2 Estará sujeito a suspensão temporária dos Serviços Prestados o(a) CONTRATANTE</strong> em débito com a <strong>CONTRATADA</strong> a partir do 5º. (quinto) dia após o vencimento, cujo restabelecimento se dará mediante o pagamento.
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml7">
+									9.3 O atraso de pagamento por mais de 30 (trinta) dias, ensejará a retirada dos equipamentos cedidos em consignação pela <strong>CONTRATADA</strong>, mediante aviso com 72 (setenta e duas) horas de antecedência.
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml7">
+									9.4 A partir de 30 (trinta) dias de atraso, caso os equipamentos ainda não tenham sido retirados, o restabelecimento dos serviços dar-se-à em até 72 (setenta e duas) horas após o pagamento do débito, acrescido dos encargos financeiros e taxa de instalação.
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml7">
+									9.5 Independentemente de interpelação Judicial ou Extrajudicial após 60 (sessenta) dias do vencimento e não pago os serviços, considera-se definitivamente rescindido o CONTRATO, ensejando a CONTRATADA proceder medidas judiciais cabíveis. Como inclusão no serviço de proteção ao credito (SPC), (SERASA).
+								</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="row">
+					<table class="w-100">
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml5">
+									10. <strong>DAS DISPOSIÇÕES FINAIS</strong>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml7">
+									<strong>A mudança de endereço do(a) CONTRATANTE</strong> será condicionada a viabilidade técnica disponível da <strong>CONTRATADA</strong>, sabendo-se desde já que a impossibilidade não implica em quebra de contrato nem enseja indenização de qualquer natureza. Será rescindido de pleno direito sem indenizações, o que não inviabiliza o recebimento de débitos vencidos, caso haja. Havendo viabilidade técnica, o contrato terá sua continuidade, entretanto, sua transferência dar-se-à mediante as seguintes condições:
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml7">
+									a) Quitação de débitos anteriores se houver;
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml7">
+									b) Pagamento da taxa de instalação;
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml7">
+									c) Até 72 (setenta e duas) após o pagamento da taxa de instalação.
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml7">
+									Sob pena de rescisão contratual, fica expressamente vedado o(a) <strong>CONTRATANTE</strong>:
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml7">
+									a) proceder alteração por conta própria do local de instalação de equipamentos da <strong>CONTRATADA</strong>;
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml7">
+									b) realizar instalação de extinção(ões);
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml7">
+									c) retransmitir sinal para terceiros a título gratuito ou oneroso;
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml7">
+									d) modificar ou tentar alterar configurações de equipamentos da <strong>CONTRATADA</strong>.
+								</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="row">
+					<table class="w-100">
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml5">
+									A título de <strong>ADESÃO</strong> é cobrada do usuário <strong>CONTRATANTE</strong> uma Taxa de R$ [[CL_INSTALACAO]] [[CL_INSTALACAO_EX]] reais, que se refere à instalação, manutenção e substituição dos equipamentos cedidos em comodato, Cláusula Segunda, Item 2.1 – Das Obrigações da <strong>CONTRATADA. “KIT”</strong> componentes descritos na anexa <strong>ORDEM DE SERVIÇO. E por estarem de pleno acordo, assinam o presente Contrato, em 2 (duas) vias de igual teor e forma, na presença das testemunhas abaixo.</strong>
+								</div>
+							</td>
+						</tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+					</table>
+				</div>
+
+				<div class="row">
+					<table class="w-100">
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr valign="middle">
+							<td align="center" class="em15">
+								{CL_ID} - {CL_NOME}
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="row">
+					<table class="w-100">
+						<tr valign="middle">
+							<td align="left" class="w-30">
+								<img width="100%" src="https://installnet.github.io/assets/images/installnet.png">
+							</td>
+							<td align="center" class="header-td">
+								<span class="header"><strong>CONTRATO DE ACESSO A INTERNET BANDA LARGA QUE CELEBRAM  ENTRE SI:</strong></span>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="row">
+					<table class="w-100">
+						<tr valign="middle">
+							<td align="left">
+								<span class="em17"><strong>Whatsapp: 98841-8181</strong></span>
+							</td>
+							<td align="right">
+								<span class="em17"><strong>Nº. [[CL_CONTRATO]]</strong></span>
+							</td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="row">
+					<table class="w-100">
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr valign="middle">
+							<td align="center" class="em15">
+								<strong>SOLICITAÇÃO DE LINK DE INTERNET BANDA LARGA DADOS DO CONTRATANTE</strong>
+							</td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="row">
+					<table class="w-100">
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr valign="middle">
+							<td align="middle">
+								<span class="em17 times"><strong>ANEXO - I</strong></span>
+							</td>
+						</tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+					</table>
+				</div>
+
+				<div class="row">
+					<table class="w-100" style="border-color: black;" border="1px" cellspacing="1px" cellpadding="1px">
+						<tr valign="middle">
+							<td align="left" class="w-30">
+								<span class="em17 times">&nbsp;
+									NOME/RAZÃO SOCIAL
+								</span>
+							</td>
+							<td align="left">
+								<span class="em17 times"><strong>&nbsp;
+									{CL_NOME}
+								</strong></span>
+							</td>
+						</tr>
+						<tr valign="middle">
+							<td align="left">
+								<span class="em17 times">&nbsp;
+									CPF/CNPJ
+								</span>
+							</td>
+							<td align="left">
+								<span class="em17 times"><strong>&nbsp;
+									C.P.F. {CL_CPF_CNPJ} RG {CL_RG} SSP/{CL_ESTADO}
+								</strong></span>
+							</td>
+						</tr>
+						<tr valign="middle">
+							<td align="left">
+								<span class="em17 times">&nbsp;
+									TELEFONE – EMAIL
+								</span>
+							</td>
+							<td align="left">
+								<span class="em17 times"><strong>&nbsp;
+									{CL_TELEFONES} / {CL_TELCOMERCIAL} / {CL_EMAIL}
+								</strong></span>
+							</td>
+						</tr>
+						<tr valign="middle">
+							<td align="left">
+								<span class="em17 times">&nbsp;
+									ENDEREÇO
+								</span>
+							</td>
+							<td align="left">
+								<span class="em17 times"><strong>&nbsp;
+									{CL_ENDERECO_LOGRADOURO}
+								</strong></span>
+							</td>
+						</tr>
+						<tr valign="middle">
+							<td align="left">
+								<span class="em17 times">&nbsp;
+									BAIRRO
+								</span>
+							</td>
+							<td align="left">
+								<span class="em17 times"><strong>&nbsp;
+									{CL_BAIRRO}
+								</strong></span>
+							</td>
+						</tr>
+						<tr valign="middle">
+							<td align="left">
+								<span class="em17 times">&nbsp;
+									LINK
+								</span>
+							</td>
+							<td align="left">
+								<span class="em17 times"><strong>&nbsp;
+									{CL_GROUP_NAME} QUANT. DE PONTOS ( [[CL_PONTOS]] )
+								</strong></span>
+							</td>
+						</tr>
+						<tr valign="middle">
+							<td align="left">
+								<span class="em17 times">&nbsp;
+									TIPO DE CONEXÃO
+								</span>
+							</td>
+							<td align="left">
+								<span class="em17 times"><strong>&nbsp;
+									VIA {OS_CATEGORIA}
+								</strong></span>
+							</td>
+						</tr>
+						<tr valign="middle">
+							<td align="left">
+								<span class="em17 times">&nbsp;
+									OBSERVAÇÕES
+								</span>
+							</td>
+							<td align="left">
+								<span class="em17 times"><strong>&nbsp;
+									{OS_DESCRICAO}
+								</strong></span>
+							</td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="row">
+					<table class="w-100">
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr valign="middle">
+							<td align="middle">
+								<span class="em17 times"><strong>RELAÇÃO DE SERVIÇOS</strong></span>
+							</td>
+						</tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+					</table>
+				</div>
+
+				<div class="row">
+					<table class="w-100" style="border-color: black;" border="1px" cellspacing="1px" cellpadding="1px">
+						<tr valign="middle">
+							<td align="center">
+								<span class="em17 times">
+									SERVIÇOS
+								</span>
+							</td>
+							<td align="center">
+								<span class="em17 times"><strong>
+									QUANT.
+								</strong></span>
+							</td>
+							<td align="center">
+								<span class="em17 times"><strong>
+									VALOR DOS SERVIÇOS
+								</strong></span>
+							</td>
+						</tr>
+						<tr valign="middle">
+							<td align="left">
+								<span class="em17 times"><strong>&nbsp;
+									Assinatura Mensal de Acesso de Internet Banda Larga
+								</strong></span>
+							</td>
+							<td align="center" class="w-10">
+								<span class="em17 times"><strong>&nbsp;
+									[[CL_PONTOS]]
+								</strong></span>
+							</td>
+							<td align="center">
+								<span class="em17 times"><strong>&nbsp;
+									R$ {CL_VALOR_MENSALIDADE}
+								</strong></span>
+							</td>
+						</tr>
+						<tr valign="middle">
+							<td align="left">
+								<span class="em17 times"><strong>&nbsp;
+									Valor Adicional por ponto
+								</strong></span>
+							</td>
+							<td align="left">
+								<span class="em17 times"><strong>&nbsp;
+									
+								</strong></span>
+							</td>
+							<td align="left">
+								<span class="em17 times"><strong>&nbsp;
+									
+								</strong></span>
+							</td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="row">
+					<table class="w-100">
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17">
+									1.1 - O prazo de demais itens do presente instrumento estará vinculado ao que foi pactuado no <strong>CONTRATO DE SERVIÇOS</strong>.
+								</div>
+							</td>
+						</tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17">
+									2.1 - <strong>O CONTRATANTE</strong> pagará mensalmente a <strong>CONTRATADA</strong>, pelos serviços relacionados acima.
+								</div>
+							</td>
+						</tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17">
+									3.1 - Fica eleito entre as partes um dia de cada mês para o pagamento da mensalidade acima descrita, escolhida pelo(a) <strong>CONTRATANTE</strong>.
+								</div>
+							</td>
+						</tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr>
+							<td class="w-100">
+								<div align="center" class="em17">
+									10 (&nbsp;<span id="venc10"></span>&nbsp;) / 15 (&nbsp;<span id="venc15"></span>&nbsp;) / 20 (&nbsp;<span id="venc20"></span>&nbsp;)
+								</div>
+							</td>
+						</tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17">
+									Fica eleito o Foro da Comarca de Maceió, para dirimir eventuais duvidas inerentes ao presente Contra.
+								</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="row">
+					<table class="w-100">
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr>
+							<td class="w-100">
+								<div align="center" class="em17">
+									<strong>MACEIÓ, {DIA} DE [[CL_MES]] DE {ANO}</strong>
+								</div>
+							</td>
+						</tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+					</table>
+				</div>
+
+				<div class="row">					
+					<table class="w-100">
+						<tr>
+							<td align="center">______________________________________________</td>
+							<td align="center">______________________________________________</td>
+						</tr>
+						<tr>
+							<td>
+								<div align="center" class="em17">
+									PELA CONTRATADA:
+								</div>
+							</td>
+							<td>
+								<div align="center" class="em17">
+									PELO CONTRATANTE:
+								</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="row">					
+					<table class="w-70">
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+					</table>
+				</div>
+
+				<div class="row">					
+					<table class="w-100">
+						<tr>
+							<td align="center">______________________________________________</td>
+							<td align="center">______________________________________________</td>
+						</tr>
+						<tr>
+							<td>
+								<div align="center" class="em17">
+									TESTEMUNHA - CPF:
+								</div>
+							</td>
+							<td>
+								<div align="center" class="em17">
+									TESTEMUNHA - CPF:
+								</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="row">
+					<table class="w-100">
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr valign="middle">
+							<td align="center" class="em15">
+								{CL_ID} - {CL_NOME}
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="row">
+					<table class="w-100">
+						<tr valign="middle">
+							<td align="left" class="w-30">
+								<img width="100%" src="https://installnet.github.io/assets/images/installnet.png">
+							</td>
+							<td align="center" class="header-td">
+								<span class="header"><strong>CONTRATO DE ACESSO A INTERNET BANDA LARGA QUE CELEBRAM  ENTRE SI:</strong></span>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="row">
+					<table class="w-100">
+						<tr valign="middle">
+							<td align="left">
+								<span class="em17"><strong>Whatsapp: 98841-8181</strong></span>
+							</td>
+							<td align="right">
+								<span class="em17"><strong>Nº. [[CL_CONTRATO]]</strong></span>
+							</td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="row">
+					<table class="w-100">
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr valign="middle">
+							<td align="center" class="em15">
+								<strong>SOLICITAÇÃO DE LINK DE INTERNET BANDA LARGA DADOS DO CONTRATANTE</strong>
+							</td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="row">
+					<table class="w-100">
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr valign="middle">
+							<td align="middle">
+								<span class="em17 times"><strong>ANEXO - I</strong></span>
+							</td>
+						</tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+					</table>
+				</div>
+
+				<div class="row">
+					<table class="w-100" style="border-color: black;" border="1px" cellspacing="1px" cellpadding="1px">
+						<tr valign="middle">
+							<td align="left" class="w-30">
+								<span class="em17 times">&nbsp;
+									NOME/RAZÃO SOCIAL
+								</span>
+							</td>
+							<td align="left">
+								<span class="em17 times"><strong>&nbsp;
+									{CL_NOME}
+								</strong></span>
+							</td>
+						</tr>
+						<tr valign="middle">
+							<td align="left">
+								<span class="em17 times">&nbsp;
+									CPF/CNPJ
+								</span>
+							</td>
+							<td align="left">
+								<span class="em17 times"><strong>&nbsp;
+									C.P.F. {CL_CPF_CNPJ} RG {CL_RG} SSP/{CL_ESTADO}
+								</strong></span>
+							</td>
+						</tr>
+						<tr valign="middle">
+							<td align="left">
+								<span class="em17 times">&nbsp;
+									TELEFONE – EMAIL
+								</span>
+							</td>
+							<td align="left">
+								<span class="em17 times"><strong>&nbsp;
+									{CL_TELEFONES} / {CL_TELCOMERCIAL} / {CL_EMAIL}
+								</strong></span>
+							</td>
+						</tr>
+						<tr valign="middle">
+							<td align="left">
+								<span class="em17 times">&nbsp;
+									ENDEREÇO
+								</span>
+							</td>
+							<td align="left">
+								<span class="em17 times"><strong>&nbsp;
+									{CL_ENDERECO_LOGRADOURO}
+								</strong></span>
+							</td>
+						</tr>
+						<tr valign="middle">
+							<td align="left">
+								<span class="em17 times">&nbsp;
+									BAIRRO
+								</span>
+							</td>
+							<td align="left">
+								<span class="em17 times"><strong>&nbsp;
+									{CL_BAIRRO}
+								</strong></span>
+							</td>
+						</tr>
+						<tr valign="middle">
+							<td align="left">
+								<span class="em17 times">&nbsp;
+									LINK
+								</span>
+							</td>
+							<td align="left">
+								<span class="em17 times"><strong>&nbsp;
+									{CL_GROUP_NAME} QUANT. DE PONTOS ( [[CL_PONTOS]] )
+								</strong></span>
+							</td>
+						</tr>
+						<tr valign="middle">
+							<td align="left">
+								<span class="em17 times">&nbsp;
+									TIPO DE CONEXÃO
+								</span>
+							</td>
+							<td align="left">
+								<span class="em17 times"><strong>&nbsp;
+									VIA {OS_CATEGORIA}
+								</strong></span>
+							</td>
+						</tr>
+						<tr valign="middle">
+							<td align="left">
+								<span class="em17 times">&nbsp;
+									OBSERVAÇÕES
+								</span>
+							</td>
+							<td align="left">
+								<span class="em17 times"><strong>&nbsp;
+									{OS_DESCRICAO}
+								</strong></span>
+							</td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="row">
+					<table class="w-100">
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr valign="middle">
+							<td align="middle">
+								<span class="em17 times"><strong>RELAÇÃO DE SERVIÇOS</strong></span>
+							</td>
+						</tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+					</table>
+				</div>
+
+				<div class="row">
+					<table class="w-100" style="border-color: black;" border="1px" cellspacing="1px" cellpadding="1px">
+						<tr valign="middle">
+							<td align="center">
+								<span class="em17 times">
+									SERVIÇOS
+								</span>
+							</td>
+							<td align="center">
+								<span class="em17 times"><strong>
+									QUANT.
+								</strong></span>
+							</td>
+							<td align="center">
+								<span class="em17 times"><strong>
+									VALOR DOS SERVIÇOS
+								</strong></span>
+							</td>
+						</tr>
+						<tr valign="middle">
+							<td align="left">
+								<span class="em17 times"><strong>&nbsp;
+									Assinatura Mensal de Acesso de Internet Banda Larga
+								</strong></span>
+							</td>
+							<td align="center" class="w-10">
+								<span class="em17 times"><strong>&nbsp;
+									[[CL_PONTOS]]
+								</strong></span>
+							</td>
+							<td align="center">
+								<span class="em17 times"><strong>&nbsp;
+									R$ {CL_VALOR_MENSALIDADE}
+								</strong></span>
+							</td>
+						</tr>
+						<tr valign="middle">
+							<td align="left">
+								<span class="em17 times"><strong>&nbsp;
+									Valor Adicional por ponto
+								</strong></span>
+							</td>
+							<td align="left">
+								<span class="em17 times"><strong>&nbsp;
+									
+								</strong></span>
+							</td>
+							<td align="left">
+								<span class="em17 times"><strong>&nbsp;
+									
+								</strong></span>
+							</td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="row">
+					<table class="w-100">
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17">
+									1.1 - O prazo de demais itens do presente instrumento estará vinculado ao que foi pactuado no <strong>CONTRATO DE SERVIÇOS</strong>.
+								</div>
+							</td>
+						</tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17">
+									2.1 - <strong>O CONTRATANTE</strong> pagará mensalmente a <strong>CONTRATADA</strong>, pelos serviços relacionados acima.
+								</div>
+							</td>
+						</tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17">
+									3.1 - Fica eleito entre as partes um dia de cada mês para o pagamento da mensalidade acima descrita, escolhida pelo(a) <strong>CONTRATANTE</strong>.
+								</div>
+							</td>
+						</tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr>
+							<td class="w-100">
+								<div align="center" class="em17">
+									10 (&nbsp;<span id="venc10"></span>&nbsp;) / 15 (&nbsp;<span id="venc15"></span>&nbsp;) / 20 (&nbsp;<span id="venc20"></span>&nbsp;)
+								</div>
+							</td>
+						</tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17">
+									Fica eleito o Foro da Comarca de Maceió, para dirimir eventuais duvidas inerentes ao presente Contra.
+								</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="row">
+					<table class="w-100">
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr>
+							<td class="w-100">
+								<div align="center" class="em17">
+									<strong>MACEIÓ, {DIA} DE [[CL_MES]] DE {ANO}</strong>
+								</div>
+							</td>
+						</tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+					</table>
+				</div>
+
+				<div class="row">					
+					<table class="w-100">
+						<tr>
+							<td align="center">______________________________________________</td>
+							<td align="center">______________________________________________</td>
+						</tr>
+						<tr>
+							<td>
+								<div align="center" class="em17">
+									PELA CONTRATADA:
+								</div>
+							</td>
+							<td>
+								<div align="center" class="em17">
+									PELO CONTRATANTE:
+								</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="row">					
+					<table class="w-70">
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+					</table>
+				</div>
+
+				<div class="row">					
+					<table class="w-100">
+						<tr>
+							<td align="center">______________________________________________</td>
+							<td align="center">______________________________________________</td>
+						</tr>
+						<tr>
+							<td>
+								<div align="center" class="em17">
+									TESTEMUNHA - CPF:
+								</div>
+							</td>
+							<td>
+								<div align="center" class="em17">
+									TESTEMUNHA - CPF:
+								</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="row">
+					<table class="w-100">
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr valign="middle">
+							<td align="center" class="em15">
+								{CL_ID} - {CL_NOME}
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="row">
+					<table class="w-100">
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr valign="middle">
+							<td align="center" class="em15">
+								<strong>RELATÓRIO DO CLIENTE</strong>
+							</td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="row">
+					<table class="w-100">
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17">
+									Nossos equipamentos detectam a conexão do cliente e mostram relatórios sobre a conexão do usuário com o servidor.
+								</div>
+							</td>
+						</tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17">
+									<strong>Existe uma taxa de manutenção no valor de R$30.00 caso o cliente solicite pela 3ª vez a visita de um técnico e é constatado que o problema é o mesmo na máquina do cliente.</strong>
+								</div>
+							</td>
+						</tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17">
+									Se tentar conectar e não conseguir ligar para empresa, no horário de atendimento:
+								</div>
+							</td>
+						</tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml5">
+									<strong>- Telefone: 3374 8181 / (82) 98841 8181 (WhatsApp);</strong>
+								</div>
+							</td>
+						</tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml5">
+									<strong>- Facebook: InstallNet Serviços LTDA / Instagram: @installnetal;</strong>
+								</div>
+							</td>
+						</tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17">
+									Horários de atendimento:
+								</div>
+							</td>
+						</tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml5">
+									<strong>- 8h às 12h; 14h às 18 h (Segunda à Sexta)</strong>
+								</div>
+							</td>
+						</tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml5">
+									<strong>- 8h às 16h; (Sábado)</strong>
+								</div>
+							</td>
+						</tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17 ml5">
+									<strong>- Fechados durante domingos e feriados.</strong>
+								</div>
+							</td>
+						</tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17">
+									O prazo de atendimento para um suporte é de até 72 horas.
+								</div>
+							</td>
+						</tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17">
+									<strong>Existe uma taxa no valor de R$15 para configuração de roteador (Exemplo: mudança de senha/nome no WIFI).</strong>
+								</div>
+							</td>
+						</tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17">
+									<strong>Existe uma taxa no valor de R$30 para mudança de endereço.</strong>
+								</div>
+							</td>
+						</tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17">
+									<strong>Não é dado isenção de mensalidade por defeito na máquina do cliente.</strong>
+								</div>
+							</td>
+						</tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17">
+									A partir de 60 dias de inadimplência é feita à retirada dos equipamentos.
+								</div>
+							</td>
+						</tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17">
+									O cliente tem 3 opções de datas de vencimento para escolher no ato da assinatura do contrato. Caso queira mudar a data durante o período de vigência deste, é cobrado a diferença dos dias de acordo com a mudança.
+								</div>
+							</td>
+						</tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+					</table>
+				</div>
+
+				<div class="row">
+					<table class="w-100" style="border-color: black;" border="1px" cellspacing="1px" cellpadding="1px">
+						<tr valign="middle">
+							<td align="left" class="w-20">
+								<span class="em17 times"><strong>&nbsp;
+									USUÁRIO:
+								</strong></span>
+							</td>
+							<td align="left">
+								<span class="em17 times">&nbsp;
+									{CL_USER}
+								</span>
+							</td>
+						</tr>
+						<tr valign="middle">
+							<td align="left" class="w-20">
+								<span class="em17 times"><strong>&nbsp;
+									SENHA:
+								</strong></span>
+							</td>
+							<td align="left">
+								<span class="em17 times">&nbsp;
+									{CL_SENHA}
+								</span>
+							</td>
+						</tr>
+						<tr valign="middle">
+							<td align="left" class="w-20">
+								<span class="em17 times"><strong>&nbsp;
+									WIFI:
+								</strong></span>
+							</td>
+							<td align="left">
+								<span class="em17 times">&nbsp;
+									[[CL_WIFI]]
+								</span>
+							</td>
+						</tr>
+						<tr valign="middle">
+							<td align="left" class="w-20">
+								<span class="em17 times"><strong>&nbsp;
+									SENHA:
+								</strong></span>
+							</td>
+							<td align="left">
+								<span class="em17 times">&nbsp;
+									[[CL_WIFI_SENHA]]
+								</span>
+							</td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="row">
+					<table class="w-100">
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr valign="middle">
+							<td align="center" class="em15">
+								<strong>{CL_NOME}</strong>
+							</td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="row">
+					<table class="w-100">
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr>
+							<td class="w-100">
+								<div align="center" class="em17">
+									<strong>INSTALLNET - CJ. JOÃO SAMPAIO II, 84A, BENEDITO BENTES I - MACEIÓ</strong>
+								</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="row">
+					<table class="w-100">
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr>
+							<td class="w-100">
+								<div align="center" class="em15">
+									<strong>OS: {OS_ID} | Aberto em: {DATA_ABERTUTA_OS} | Agendado para: {DT_AGENDADA} {PERIODO_AGENDADO}</strong>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="w-100">
+								<div align="center" class="em15">
+									<strong>Aberto por: {ABERTO_POR} | Operador: {OS_OPERADOR}</strong>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="w-100">
+								<div align="center" class="em15">
+									<strong>INSTALAÇÃO ( {OS_CATEGORIA}) - Observações: {OS_DESCRICAO}</strong>
+								</div>
+							</td>
+						</tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+					</table>
+				</div>
+
+				<div class="row">
+					<table class="w-100">
+						<tr>
+							<td>
+								<table class="w-100">
+									<tr>
+										<td class="w-100">
+											<div align="justify" class="em15">
+												Cliente: {CL_ID} - {CL_NOME}
+											</div>
+										</td>
+									</tr>
+									<tr><td class="w-100">&nbsp;</td></tr>
+									<tr>
+										<td class="w-100">
+											<div align="justify" class="em15">
+												Endereço: {CL_END_COMPLETO} - {CL_BAIRRO} / {CL_CIDADE}
+											</div>
+										</td>
+									</tr>
+									<tr><td class="w-100">&nbsp;</td></tr>
+									<tr>
+										<td class="w-100">
+											<div align="justify" class="em15">
+												Referência: {CL_REFERENCIA}
+											</div>
+										</td>
+									</tr>
+									<tr><td class="w-100">&nbsp;</td></tr>
+									<tr>
+										<td class="w-100">
+											<div align="justify" class="em15">
+												Contato: {CL_TELEFONES} / {CL_TELCOMERCIAL}
+											</div>
+										</td>
+									</tr>
+									<tr><td class="w-100">&nbsp;</td></tr>
+									<tr>
+										<td class="w-100">
+											<div align="justify" class="em15">
+												Plano: {CL_GROUP_NAME}
+											</div>
+										</td>
+									</tr>
+									<tr><td class="w-100">&nbsp;</td></tr>
+									<tr>
+										<td class="w-100">
+											<div align="justify" class="em15">
+												Senha(s): {CL_SENHA}
+											</div>
+										</td>
+									</tr>
+									<tr><td class="w-100">&nbsp;</td></tr>
+									<tr>
+										<td class="w-100">
+											<div align="justify" class="em15">
+												Teste(s): {CLIENTE_DOWNLOAD_UPLOAD}
+											</div>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td class="w-35">
+								<div style="border: 1px solid black"><table>
+									<tr><td class="w-100">&nbsp;</td></tr>
+									<tr>
+										<td class="w-100">
+											<div align="left" class="em15">
+												&nbsp;Rede: _______ Cor da Fibra: ___________
+											</div>
+										</td>
+									</tr>
+									<tr><td class="w-100">&nbsp;</td></tr>
+									<tr>
+										<td class="w-100">
+											<div align="left" class="em15">
+												&nbsp;Luzes: CTO-__.__ / CLI-__.__ / SIS-__.__
+											</div>
+										</td>
+									</tr>
+									<tr><td class="w-100">&nbsp;</td></tr>
+									<tr>
+										<td class="w-100">
+											<div align="left" class="em15">
+												&nbsp;Materiais:
+											</div>
+										</td>
+									</tr>
+									<tr><td class="w-100">&nbsp;</td></tr>
+									<tr>
+										<td class="w-100">
+											<div align="left" class="em15">
+												&nbsp;- ONU: __ / Roteador: __ / Switch: __
+											</div>
+										</td>
+									</tr>
+									<tr><td class="w-100">&nbsp;</td></tr>
+									<tr>
+										<td class="w-100">
+											<div align="left" class="em15">
+												&nbsp;- RJ-45: __ / Conector Óptico: ___
+											</div>
+										</td>
+									</tr>
+									<tr><td class="w-100">&nbsp;</td></tr>
+									<tr>
+										<td class="w-100">
+											<div align="left" class="em15">
+												&nbsp;- Cabo ____m / Drop ____m
+											</div>
+										</td>
+									</tr>
+									<tr><td class="w-100">&nbsp;</td></tr>
+									<tr>
+										<td class="w-100">
+											<div align="left" class="em15">
+												&nbsp;- Fixafio: ___ / Esticadores: ___
+											</div>
+										</td>
+									</tr>
+									<tr><td class="w-100">&nbsp;</td></tr>
+								</table></div>
+							</td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="row">
+					<table class="w-100">
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em15">
+									Iniciado em __/__/____ às __:__. Finalizado em __/__/____ às __:__. Valor (R${OS_PRICE}) recebido R$___,__. 
+								</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="row">
+					<table class="w-100">
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em15">
+									Relatório Técnico: __________________________________________________________.
+								</div>
+							</td>
+						</tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+					</table>
+				</div>
+
+				<div class="row">					
+					<table class="w-100">
+						<tr>
+							<td align="left">______________________________________________</td>
+							<td align="right">______________________________________________</td>
+						</tr>
+						<tr>
+							<td>
+								<div align="left" class="em17">
+									TÉCNICO(S)
+								</div>
+							</td>
+							<td>
+								<div align="right" class="em17">
+									{CL_NOME}
+								</div>
+							</td>
+						</tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+					</table>
+				</div>
+
+				<hr>
+				
+				<div class="row">
+					<table class="w-100">
+						<tr valign="middle">
+							<td align="left" class="w-30">
+								<img width="100%" src="https://installnet.github.io/assets/images/installnet.png">
+							</td>
+							<td align="center" class="header-td">
+								<span class="header"><strong>RECIBO DE ENTREGA DE EQUIPAMENTO</strong></span>
+							</td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="row">
+					<table class="w-100">
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17">
+									<strong>Recebi da INSTALLNET SERVIÇOS LTDA neste ato [[CL_RECIBO]] cedido em comodato. Me responsabilizo pelo equipamento enquanto em meu poder.</strong>
+								</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="row">
+					<table class="w-100">
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17">
+									<strong>(InstallNet Serviços LTDA não se responsabiliza por nenhum dano físico ao equipamento.)</strong>
+								</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="row">
+					<table class="w-100">
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17">
+									<strong>MACEIÓ, {DIA} DE [[CL_MES]] DE {ANO}</strong>
+								</div>
+							</td>
+						</tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+					</table>
+				</div>
+
+				<div class="row">					
+					<table class="w-100">
+						<tr>
+							<td align="left">______________________________________________________________________________________________</td>
+						</tr>
+						<tr>
+							<td>
+								<div align="left" class="em17">
+									<strong>INSTALLNET SERVIÇOS LTDA</strong>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div align="left" class="em17">
+									<strong>CNPJ.: 12.381.784/0001-24</strong>
+								</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="row">					
+					<table class="w-100">
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr>
+							<td align="left">______________________________________________________________________________________________</td>
+						</tr>
+						<tr>
+							<td>
+								<div align="left" class="em17">
+									<strong>{CL_NOME}</strong>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div align="left" class="em17">
+									<strong>{CL_CPF_CNPJ}</strong>
+								</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+				
+				<div class="row">
+					<table class="w-100">
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr valign="middle">
+							<td align="center" class="em15">
+								<strong>{CL_NOME}</strong>
+							</td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="row">
+					<table class="w-100">
+						<tr valign="middle">
+							<td align="center" class="w-30">
+								<img class="w-30" src="https://installnet.github.io/assets/images/installnet.png">
+							</td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="row">
+					<table class="w-100">
+						<tr valign="middle">
+							<td align="center" class="header-td">
+								<span class="header"><strong>RECIBO DE ENTREGA DE EQUIPAMENTO</strong></span>
+							</td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="row">
+					<table class="w-100">
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17">
+									<strong>Recebi da INSTALLNET SERVIÇOS LTDA neste ato [[CL_RECIBO]] cedido em comodato. Me responsabilizo pelo equipamento enquanto em meu poder.</strong>
+								</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="row">
+					<table class="w-100">
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17">
+									<strong>(InstallNet Serviços LTDA não se responsabiliza por nenhum dano físico ao equipamento.)</strong>
+								</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="row">
+					<table class="w-100">
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr>
+							<td class="w-100">
+								<div align="justify" class="em17">
+									<strong>MACEIÓ, {DIA} DE [[CL_MES]] DE {ANO}</strong>
+								</div>
+							</td>
+						</tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+					</table>
+				</div>
+
+				<div class="row">					
+					<table class="w-100">
+						<tr>
+							<td align="left">______________________________________________________________________________________________</td>
+						</tr>
+						<tr>
+							<td>
+								<div align="left" class="em17">
+									<strong>INSTALLNET SERVIÇOS LTDA</strong>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div align="left" class="em17">
+									<strong>CNPJ.: 12.381.784/0001-24</strong>
+								</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="row">					
+					<table class="w-100">
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr><td class="w-100">&nbsp;</td></tr>
+						<tr>
+							<td align="left">______________________________________________________________________________________________</td>
+						</tr>
+						<tr>
+							<td>
+								<div align="left" class="em17">
+									<strong>{CL_NOME}</strong>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div align="left" class="em17">
+									<strong>{CL_CPF_CNPJ}</strong>
+								</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<script src="https://installnet.github.io/scripts/parse_os_instalacao.js"></script>
+</body>
+</html>
+
