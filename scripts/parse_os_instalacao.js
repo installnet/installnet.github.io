@@ -100,4 +100,4 @@ function parse(){
 document.querySelector("#print_button").addEventListener('click', function(){
 	parse();
 	window.print();
-});;
+});
