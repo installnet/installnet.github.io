@@ -22,14 +22,13 @@ function parse(){
 	    }
 	    return r.join(e);
 	}
-
+	
 	const MESES = ["JANEIRO", "FEVEREIRO", "MARÇO", "ABRIL", "MAIO", "JUNHO", "JULHO", "AGOSTO", "SETEMBRO", "OUTUBRO", "NOVEMBRO", "DEZEMBRO"];
 	
 	var cl_nome = document.querySelector("#cl_nome").innerHTML.toUpperCase();
 	document.title = cl_nome;
 	
 	var cl_id = document.querySelector("#cl_id").innerHTML;
-
 	var cl_mes = MESES[parseInt(document.querySelector("#mes").innerHTML) - 1];
 	var cl_group_name = document.querySelector("#cl_group_name").innerHTML;
 	cl_group_name = cl_group_name.substring(0, cl_group_name.length - 2)
@@ -38,13 +37,12 @@ function parse(){
 	var cl_pontos = cl_group_name.split('|').length;
 	
 	var cl_contrato = "100" + cl_id;
-	var cl_extenso = parseFloat(cl_instalacao).toString().extenso().toUpperCase();
-
-	var cl_estado = document.querySelector("#ssp").value;
-	var cl_desc_instalacao = document.querySelector("#desc_inst").value;
-	var cl_wifi = document.querySelector("#rede_wifi").value;
-	var cl_wifi_senha = document.querySelector("#senha_wifi").value;
-	var cl_recibo = document.querySelector("#recibo").value;
+	var cl_extenso = prompt("VALOR POR EXTENSO: ", (parseFloat(cl_instalacao)).toString().extenso().toUpperCase());
+	var cl_estado = prompt("CPF SSP/?: ", "AL");
+	var cl_desc_instalacao = prompt("DESCRICAO DA INSTALACAO: ", "Instalação no valor de R$"+cl_instalacao+" com roteador do cliente.");
+	var cl_wifi = prompt("REDE WIFI: ", cl_nome+" (INSTALLNET)");
+	var cl_wifi_senha = prompt("SENHA WIFI: ", "12345678");
+	var cl_recibo = prompt("RECIBO: ", "");
 	
 	if(cl_dia_vencimento == "10"){
 		document.querySelector("#venc10").innerHTML = "X";
@@ -95,9 +93,8 @@ function parse(){
 	
 	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_RECIBO]]", cl_recibo);
 	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_MES]]", cl_mes.toLowerCase());
+	
+	window.print()
 }
 
-document.querySelector("#print_button").addEventListener('click', function(){
-	parse();
-	window.print();
-});
+window.onload = setTimeout(function() { parse(); }, 1000);
