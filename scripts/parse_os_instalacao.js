@@ -97,7 +97,7 @@ function parse(){
 	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_MES]]", cl_mes.toLowerCase());
 }
 
-document.querySelector("#print_button").onclick = function(){
+document.querySelector("#print_button").addEventListener('click', function(){
 	parse();
 	window.print();
-};
+});;
