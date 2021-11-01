@@ -1,4 +1,4 @@
-function parse(){
+/*function parse(){
 	String.prototype.extenso = function(c){
 	    var ex = [
 		["zero", "um", "dois", "três", "quatro", "cinco", "seis", "sete", "oito", "nove", "dez", "onze", "doze", "treze", "quatorze", "quinze", "dezesseis", "dezessete", "dezoito", "dezenove"],
@@ -117,4 +117,4 @@ function parse(){
 	document.querySelector("#pdf_recibo").style.display = "block";
 }
 window.load = setTimeout(function(){parse()}, 1000);
-//document.querySelector("#print_button").onclick = function(){window.print();};
+*/document.querySelector("#print_button").onclick = function(){window.print();};
