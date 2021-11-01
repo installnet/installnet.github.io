@@ -119,6 +119,6 @@
 window.load = setTimeout(function(){parse()}, 1000);
 */
 document.querySelector("#print_button").onclick = function(){
-	document.querySelector("#pagina1").display = "block";
+	document.querySelector("#pagina1").style.display = "block";
 	window.print();
 };
