@@ -1,34 +1,35 @@
-/*function parse(){
-	String.prototype.extenso = function(c){
-	    var ex = [
-		["zero", "um", "dois", "três", "quatro", "cinco", "seis", "sete", "oito", "nove", "dez", "onze", "doze", "treze", "quatorze", "quinze", "dezesseis", "dezessete", "dezoito", "dezenove"],
-		["dez", "vinte", "trinta", "quarenta", "cinquenta", "sessenta", "setenta", "oitenta", "noventa"],
-		["cem", "cento", "duzentos", "trezentos", "quatrocentos", "quinhentos", "seiscentos", "setecentos", "oitocentos", "novecentos"],
-		["mil", "milhão", "bilhão", "trilhão", "quadrilhão", "quintilhão", "sextilhão", "setilhão", "octilhão", "nonilhão", "decilhão", "undecilhão", "dodecilhão", "tredecilhão", "quatrodecilhão", "quindecilhão", "sedecilhão", "septendecilhão", "octencilhão", "nonencilhão"]
-	    ];
-	    var a, n, v, i, n = this.replace(c ? /[^,\d]/g : /\D/g, "").split(","), e = " e ", $ = "real", d = "centavo", sl;
-	    for(var f = n.length - 1, l, j = -1, r = [], s = [], t = ""; ++j <= f; s = []){
-		j && (n[j] = (("." + n[j]) * 1).toFixed(2).slice(2));
-		if(!(a = (v = n[j]).slice((l = v.length) % 3).match(/\d{3}/g), v = l % 3 ? [v.slice(0, l % 3)] : [], v = a ? v.concat(a) : v).length) continue;
-		for(a = -1, l = v.length; ++a < l; t = ""){
-		    if(!(i = v[a] * 1)) continue;
-		    i % 100 < 20 && (t += ex[0][i % 100]) ||
-		    i % 100 + 1 && (t += ex[1][(i % 100 / 10 >> 0) - 1] + (i % 10 ? e + ex[0][i % 10] : ""));
-		    s.push((i < 100 ? t : !(i % 100) ? ex[2][i == 100 ? 0 : i / 100 >> 0] : (ex[2][i / 100 >> 0] + e + t)) +
-		    ((t = l - a - 2) > -1 ? " " + (i > 1 && t > 0 ? ex[3][t].replace("ão", "ões") : ex[3][t]) : ""));
-		}
-		a = ((sl = s.length) > 1 ? (a = s.pop(), s.join(" ") + e + a) : s.join("") || ((!j && (n[j + 1] * 1 > 0) || r.length) ? "" : ex[0][0]));
-		a && r.push(a + (c ? (" " + (v.join("") * 1 > 1 ? j ? d + "s" : (/0{6,}$/.test(n[0]) ? "de " : "") + $.replace("l", "is") : j ? d : $)) : ""));
-	    }
-	    return r.join(e);
+String.prototype.extenso = function(c){
+    var ex = [
+	["zero", "um", "dois", "três", "quatro", "cinco", "seis", "sete", "oito", "nove", "dez", "onze", "doze", "treze", "quatorze", "quinze", "dezesseis", "dezessete", "dezoito", "dezenove"],
+	["dez", "vinte", "trinta", "quarenta", "cinquenta", "sessenta", "setenta", "oitenta", "noventa"],
+	["cem", "cento", "duzentos", "trezentos", "quatrocentos", "quinhentos", "seiscentos", "setecentos", "oitocentos", "novecentos"],
+	["mil", "milhão", "bilhão", "trilhão", "quadrilhão", "quintilhão", "sextilhão", "setilhão", "octilhão", "nonilhão", "decilhão", "undecilhão", "dodecilhão", "tredecilhão", "quatrodecilhão", "quindecilhão", "sedecilhão", "septendecilhão", "octencilhão", "nonencilhão"]
+    ];
+    var a, n, v, i, n = this.replace(c ? /[^,\d]/g : /\D/g, "").split(","), e = " e ", $ = "real", d = "centavo", sl;
+    for(var f = n.length - 1, l, j = -1, r = [], s = [], t = ""; ++j <= f; s = []){
+	j && (n[j] = (("." + n[j]) * 1).toFixed(2).slice(2));
+	if(!(a = (v = n[j]).slice((l = v.length) % 3).match(/\d{3}/g), v = l % 3 ? [v.slice(0, l % 3)] : [], v = a ? v.concat(a) : v).length) continue;
+	for(a = -1, l = v.length; ++a < l; t = ""){
+	    if(!(i = v[a] * 1)) continue;
+	    i % 100 < 20 && (t += ex[0][i % 100]) ||
+	    i % 100 + 1 && (t += ex[1][(i % 100 / 10 >> 0) - 1] + (i % 10 ? e + ex[0][i % 10] : ""));
+	    s.push((i < 100 ? t : !(i % 100) ? ex[2][i == 100 ? 0 : i / 100 >> 0] : (ex[2][i / 100 >> 0] + e + t)) +
+	    ((t = l - a - 2) > -1 ? " " + (i > 1 && t > 0 ? ex[3][t].replace("ão", "ões") : ex[3][t]) : ""));
 	}
-	
+	a = ((sl = s.length) > 1 ? (a = s.pop(), s.join(" ") + e + a) : s.join("") || ((!j && (n[j + 1] * 1 > 0) || r.length) ? "" : ex[0][0]));
+	a && r.push(a + (c ? (" " + (v.join("") * 1 > 1 ? j ? d + "s" : (/0{6,}$/.test(n[0]) ? "de " : "") + $.replace("l", "is") : j ? d : $)) : ""));
+    }
+    return r.join(e);
+}
+
+function parse(){	
 	const MESES = ["JANEIRO", "FEVEREIRO", "MARÇO", "ABRIL", "MAIO", "JUNHO", "JULHO", "AGOSTO", "SETEMBRO", "OUTUBRO", "NOVEMBRO", "DEZEMBRO"];
 	
 	var cl_nome = document.querySelector("#cl_nome").innerHTML.toUpperCase();
 	document.title = cl_nome;
 	
 	var cl_id = document.querySelector("#cl_id").innerHTML;
+
 	var cl_mes = MESES[parseInt(document.querySelector("#mes").innerHTML) - 1];
 	var cl_group_name = document.querySelector("#cl_group_name").innerHTML;
 	cl_group_name = cl_group_name.substring(0, cl_group_name.length - 2)
@@ -37,12 +38,13 @@
 	var cl_pontos = cl_group_name.split('|').length;
 	
 	var cl_contrato = "100" + cl_id;
-	var cl_extenso = prompt("VALOR POR EXTENSO: ", (parseFloat(cl_instalacao)).toString().extenso().toUpperCase());
-	var cl_estado = prompt("CPF SSP/?: ", "AL");
-	var cl_desc_instalacao = prompt("DESCRICAO DA INSTALACAO: ", "Instalação no valor de R$"+cl_instalacao+" com roteador do cliente.");
-	var cl_wifi = prompt("REDE WIFI: ", cl_nome+" (INSTALLNET)");
-	var cl_wifi_senha = prompt("SENHA WIFI: ", "12345678");
-	var cl_recibo = prompt("RECIBO: ", "");
+	var cl_extenso = parseFloat(cl_instalacao).toString().extenso().toUpperCase();
+
+	var cl_estado = document.querySelector("#ssp").value;
+	var cl_desc_instalacao = document.querySelector("#desc_inst").value;
+	var cl_wifi = document.querySelector("#rede_wifi").value;
+	var cl_wifi_senha = document.querySelector("#senha_wifi").value;
+	var cl_recibo = document.querySelector("#recibo").value;
 	
 	if(cl_dia_vencimento == "10"){
 		document.querySelector("#venc10").innerHTML = "X";
@@ -93,32 +95,11 @@
 	
 	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_RECIBO]]", cl_recibo);
 	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_MES]]", cl_mes.toLowerCase());
-	
-	document.title = cl_nome + ' - CONTRATO';
-	//document.querySelector("#pdf_contrato").style.display = "block";
-	document.querySelector("#pdf_imprimir").style.display = "none";
-	document.querySelector("#pdf_recibo").style.display = "none";
-	window.print()
-	
-	document.title = cl_nome + ' - RECIBO';
-	document.querySelector("#pdf_contrato").style.display = "none";
-	//document.querySelector("#pdf_imprimir").style.display = "none";
-	document.querySelector("#pdf_recibo").style.display = "block";
-	window.print()
-	
-	document.title = cl_nome;
-	//document.querySelector("#pdf_contrato").style.display = "none";
-	document.querySelector("#pdf_imprimir").style.display = "block";
-	//document.querySelector("#pdf_recibo").style.display = "block";
-	window.print()
-	
-	document.querySelector("#pdf_contrato").style.display = "block";
-	document.querySelector("#pdf_imprimir").style.display = "block";
-	document.querySelector("#pdf_recibo").style.display = "block";
 }
-window.load = setTimeout(function(){parse()}, 1000);
-*/
+
 document.querySelector("#print_button").onclick = function(){
 	document.querySelector("#pagina1").style.display = "block";
+	parse();
+	
 	window.print();
 };
