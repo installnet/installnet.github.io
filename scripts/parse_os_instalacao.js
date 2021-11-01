@@ -22,7 +22,7 @@ function parse(){
 	    }
 	    return r.join(e);
 	}
-	
+
 	const MESES = ["JANEIRO", "FEVEREIRO", "MARÇO", "ABRIL", "MAIO", "JUNHO", "JULHO", "AGOSTO", "SETEMBRO", "OUTUBRO", "NOVEMBRO", "DEZEMBRO"];
 	
 	var cl_nome = document.querySelector("#cl_nome").innerHTML.toUpperCase();
@@ -98,8 +98,6 @@ function parse(){
 }
 
 document.querySelector("#print_button").onclick = function(){
-	document.querySelector("#pagina1").style.display = "block";
 	parse();
-
 	window.print();
 };
