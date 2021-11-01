@@ -117,4 +117,8 @@
 	document.querySelector("#pdf_recibo").style.display = "block";
 }
 window.load = setTimeout(function(){parse()}, 1000);
-*/document.querySelector("#print_button").onclick = function(){window.print();};
+*/
+document.querySelector("#print_button").onclick = function(){
+	document.querySelector("#pagina1").display = "block";
+	window.print();
+};
