@@ -117,10 +117,6 @@
 	document.querySelector("#pdf_recibo").style.display = "block";
 }*/
 
-
-window.onload = setTimeout(function() { 
-	document.querySelector("#print_button").addEventListener("click", function(){ 
-		window.print(); 
-		//parse(); 
-	}); 
-}, 1000);
+document.querySelector("#print_button").onclick = function(){
+	window.print();
+};
