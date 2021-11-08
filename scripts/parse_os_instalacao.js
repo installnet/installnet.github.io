@@ -93,8 +93,28 @@ function parse(){
 	
 	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_RECIBO]]", cl_recibo);
 	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_MES]]", cl_mes.toLowerCase());
+	
+	document.title = cl_nome + ' - CONTRATO';
+	//document.querySelector("#pdf_contrato").style.display = "block";
+	document.querySelector("#pdf_imprimir").style.display = "none";
+	document.querySelector("#pdf_recibo").style.display = "none";
+	window.print()
 
-	window.print();
+	document.title = cl_nome + ' - RECIBO';
+	document.querySelector("#pdf_contrato").style.display = "none";
+	//document.querySelector("#pdf_imprimir").style.display = "none";
+	document.querySelector("#pdf_recibo").style.display = "block";
+	window.print()
+
+	document.title = cl_nome;
+	//document.querySelector("#pdf_contrato").style.display = "none";
+	document.querySelector("#pdf_imprimir").style.display = "block";
+	//document.querySelector("#pdf_recibo").style.display = "block";
+	window.print()
+
+	document.querySelector("#pdf_contrato").style.display = "block";
+	document.querySelector("#pdf_imprimir").style.display = "block";
+	document.querySelector("#pdf_recibo").style.display = "block";
 }
 
 window.onload = setTimeout(function() { 
