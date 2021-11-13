@@ -6,7 +6,7 @@ function parse(){
 		["cem", "cento", "duzentos", "trezentos", "quatrocentos", "quinhentos", "seiscentos", "setecentos", "oitocentos", "novecentos"],
 		["mil", "milhão", "bilhão", "trilhão", "quadrilhão", "quintilhão", "sextilhão", "setilhão", "octilhão", "nonilhão", "decilhão", "undecilhão", "dodecilhão", "tredecilhão", "quatrodecilhão", "quindecilhão", "sedecilhão", "septendecilhão", "octencilhão", "nonencilhão"]
 	    ];
-	    var a, n, v, i, n = this.replace(c ? /[^,\d]/g : /\D/g, "").split(","), e = " e ", $ = "real", d = "centavo", sl;
+	    var a, n, v, i, n = this.replace(c ? /[^,\d]" : /\D/g, "").split(","), e = " e ", $ = "real", d = "centavo", sl;
 	    for(var f = n.length - 1, l, j = -1, r = [], s = [], t = ""; ++j <= f; s = []){
 		j && (n[j] = (("." + n[j]) * 1).toFixed(2).slice(2));
 		if(!(a = (v = n[j]).slice((l = v.length) % 3).match(/\d{3}/g), v = l % 3 ? [v.slice(0, l % 3)] : [], v = a ? v.concat(a) : v).length) continue;
@@ -98,17 +98,89 @@ function parse(){
 	// document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_MES]]", cl_mes.toLowerCase());
 
 
-	document.documentElement.innerHTML = document.documentElement.innerHTML.replace(/[[CL_CONTRATO]]/g, cl_contrato);
-	document.documentElement.innerHTML = document.documentElement.innerHTML.replace(/[[CL_GROUP_NAME]]/g, cl_group_name);
-	document.documentElement.innerHTML = document.documentElement.innerHTML.replace(/[[CL_INSTALACAO]]/g, cl_instalacao);
-	document.documentElement.innerHTML = document.documentElement.innerHTML.replace(/[[CL_INSTALACAO_EX]]/g, "("+cl_extenso+")");
-	document.documentElement.innerHTML = document.documentElement.innerHTML.replace(/[[CL_ESTADO]]/g, cl_estado);
-	document.documentElement.innerHTML = document.documentElement.innerHTML.replace(/[[CL_PONTOS]]/g, cl_pontos);
-	document.documentElement.innerHTML = document.documentElement.innerHTML.replace(/[[CL_DESC_INSTALACAO]]/g, cl_desc_instalacao);
-	document.documentElement.innerHTML = document.documentElement.innerHTML.replace(/[[CL_MES]]/g, cl_mes);
-	document.documentElement.innerHTML = document.documentElement.innerHTML.replace(/[[CL_WIFI]]/g, cl_wifi);
-	document.documentElement.innerHTML = document.documentElement.innerHTML.replace(/[[CL_WIFI_SENHA]]/g, cl_wifi_senha);
-	document.documentElement.innerHTML = document.documentElement.innerHTML.replace(/[[CL_RECIBO]]/g, cl_recibo);
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_CONTRATO]]", cl_contrato);
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_GROUP_NAME]]", cl_group_name);
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_INSTALACAO]]", cl_instalacao);
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_INSTALACAO_EX]]", "("+cl_extenso+")");
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_ESTADO]]", cl_estado);
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_PONTOS]]", cl_pontos);
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_DESC_INSTALACAO]]", cl_desc_instalacao);
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_MES]]", cl_mes);
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_WIFI]]", cl_wifi);
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_WIFI_SENHA]]", cl_wifi_senha);
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_RECIBO]]", cl_recibo);
+
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_CONTRATO]]", cl_contrato);
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_GROUP_NAME]]", cl_group_name);
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_INSTALACAO]]", cl_instalacao);
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_INSTALACAO_EX]]", "("+cl_extenso+")");
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_ESTADO]]", cl_estado);
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_PONTOS]]", cl_pontos);
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_DESC_INSTALACAO]]", cl_desc_instalacao);
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_MES]]", cl_mes);
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_WIFI]]", cl_wifi);
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_WIFI_SENHA]]", cl_wifi_senha);
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_RECIBO]]", cl_recibo);
+
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_CONTRATO]]", cl_contrato);
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_GROUP_NAME]]", cl_group_name);
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_INSTALACAO]]", cl_instalacao);
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_INSTALACAO_EX]]", "("+cl_extenso+")");
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_ESTADO]]", cl_estado);
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_PONTOS]]", cl_pontos);
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_DESC_INSTALACAO]]", cl_desc_instalacao);
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_MES]]", cl_mes);
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_WIFI]]", cl_wifi);
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_WIFI_SENHA]]", cl_wifi_senha);
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_RECIBO]]", cl_recibo);
+
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_CONTRATO]]", cl_contrato);
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_GROUP_NAME]]", cl_group_name);
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_INSTALACAO]]", cl_instalacao);
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_INSTALACAO_EX]]", "("+cl_extenso+")");
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_ESTADO]]", cl_estado);
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_PONTOS]]", cl_pontos);
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_DESC_INSTALACAO]]", cl_desc_instalacao);
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_MES]]", cl_mes);
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_WIFI]]", cl_wifi);
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_WIFI_SENHA]]", cl_wifi_senha);
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_RECIBO]]", cl_recibo);
+
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_CONTRATO]]", cl_contrato);
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_GROUP_NAME]]", cl_group_name);
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_INSTALACAO]]", cl_instalacao);
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_INSTALACAO_EX]]", "("+cl_extenso+")");
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_ESTADO]]", cl_estado);
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_PONTOS]]", cl_pontos);
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_DESC_INSTALACAO]]", cl_desc_instalacao);
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_MES]]", cl_mes);
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_WIFI]]", cl_wifi);
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_WIFI_SENHA]]", cl_wifi_senha);
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_RECIBO]]", cl_recibo);
+
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_CONTRATO]]", cl_contrato);
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_GROUP_NAME]]", cl_group_name);
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_INSTALACAO]]", cl_instalacao);
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_INSTALACAO_EX]]", "("+cl_extenso+")");
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_ESTADO]]", cl_estado);
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_PONTOS]]", cl_pontos);
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_DESC_INSTALACAO]]", cl_desc_instalacao);
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_MES]]", cl_mes);
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_WIFI]]", cl_wifi);
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_WIFI_SENHA]]", cl_wifi_senha);
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_RECIBO]]", cl_recibo);
+
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_CONTRATO]]", cl_contrato);
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_GROUP_NAME]]", cl_group_name);
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_INSTALACAO]]", cl_instalacao);
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_INSTALACAO_EX]]", "("+cl_extenso+")");
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_ESTADO]]", cl_estado);
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_PONTOS]]", cl_pontos);
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_DESC_INSTALACAO]]", cl_desc_instalacao);
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_MES]]", cl_mes);
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_WIFI]]", cl_wifi);
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_WIFI_SENHA]]", cl_wifi_senha);
+	document.documentElement.innerHTML = document.documentElement.innerHTML.replace("[[CL_RECIBO]]", cl_recibo);
 	
 	document.title = cl_nome + ' - CONTRATO';
 	//document.querySelector("#pdf_contrato").style.display = "block";
