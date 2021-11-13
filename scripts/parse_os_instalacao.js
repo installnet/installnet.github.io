@@ -174,19 +174,19 @@ function parse(){
 	document.querySelector("#pdf_imprimir").style.display = "none";
 	document.querySelector("#pdf_recibo").style.display = "none";
 	window.print()
-
+	
 	document.title = cl_nome + ' - RECIBO';
 	document.querySelector("#pdf_contrato").style.display = "none";
 	//document.querySelector("#pdf_imprimir").style.display = "none";
 	document.querySelector("#pdf_recibo").style.display = "block";
 	window.print()
-
+	
 	document.title = cl_nome;
 	//document.querySelector("#pdf_contrato").style.display = "none";
 	document.querySelector("#pdf_imprimir").style.display = "block";
 	//document.querySelector("#pdf_recibo").style.display = "block";
 	window.print()
-
+	
 	document.querySelector("#pdf_contrato").style.display = "block";
 	document.querySelector("#pdf_imprimir").style.display = "block";
 	document.querySelector("#pdf_recibo").style.display = "block";
